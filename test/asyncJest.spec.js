@@ -12,17 +12,17 @@ ATENÇÃO!!! Edite apenas este arquivo. Não altere os arquivos da pasta 'src'.
 describe('o retorno do telefonema', () => {
   test('atende', () => {
     // Insira seu teste assíncrono aqui
-    expect.assertions(1)
+    expect.assertions(1);
     return answerPhone(true).then((saudation) => {
-      expect(saudation).toEqual('Oi!')
-    })
+      expect(saudation).toEqual('Oi!');
+    });
   });
   test('ocupado', () => {
     // Insira seu teste assíncrono aqui
-    expect.assertions(2)
+    expect.assertions(2);
     return answerPhone(false).catch((error) => {
-      expect(error).not.toEqual('Oi!')
-      expect(error).toEqual(new Error('Infelizmente não podemos atender...'))
-    })
+      expect(error).not.toEqual('Oi!');
+      expect(error).toEqual(new Error('Infelizmente não podemos atender...'));
+    });
   });
 });
